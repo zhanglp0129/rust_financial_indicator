@@ -1,0 +1,2 @@
+# rust_financial_indicator
+Rust金融技术指标库
