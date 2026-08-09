@@ -2,7 +2,8 @@ use rust_decimal::Decimal;
 
 /// 简单移动平均线SMA。
 ///
-/// 返回值长度为 `prices.len()`，与 `prices` 一一对应。前 `period - 1` 个元素为前方所有价格的平均值。
+/// 返回值长度为 `prices.len()`，与 `prices` 一一对应。
+/// 样本数不足一个周期时，使用所有样本的均值。
 ///
 /// `period == 0` 则返回空数组。
 pub fn simple_moving_average(prices: &[Decimal], period: usize) -> Vec<Decimal> {
